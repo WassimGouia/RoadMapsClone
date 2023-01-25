@@ -29,21 +29,19 @@ const Card = ({title , isNew , isUpcoming }: CardProps) => {
     }
     else if(isUpcoming) {
         return (
-            <button className="flex  group no-underline bg-slate-900 border border-slate-800 font-regular hover:border-slate-600 hover:text-slate-100 p-2.5 relative rounded-lg sm:p-3.5 text-slate-400">
+            <button className={`flex group no-underline bg-slate-900 border border-slate-800 font-regular hover:border-slate-600 hover:text-slate-100 p-2.5 relative rounded-lg sm:p-3.5 text-slate-400 ${isUpcoming ? 'text-slate-400/50 bg-slate-900/50' : ''}`}>
                 <h2 className="text-left text-md">
                     {title}
                 </h2>
-
+        
                 <span className="text-xs font-medium absolute bottom-1.5 flex items-center right-2 rounded-br rounded-tl text-slate-500">
                 <span className="flex h-2 mr-1.5 w-2"><span className="h-2 w-2 inline-flex rounded-full absolute animate-ping opacity-75 bg-slate-500">
                 </span> 
                 <span className="h-2 w-2 inline-flex rounded-full relative bg-slate-600"></span>
                 </span>Upcoming</span>
-                    
-
-    
             </button>
-        )
+        );
+        
     }
 
     else {
