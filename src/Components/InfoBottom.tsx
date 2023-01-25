@@ -2,6 +2,7 @@ import { AiFillStar } from 'react-icons/ai'
 import {AiOutlineStar} from 'react-icons/ai'
 import React, { useState } from "react";
 import styled from "styled-components";
+import Container from './Container';
 
 const StyledButton = styled.button`
   className="inline-flex relative items-center bg-white border border-black   px-3 py-1.5 rounded-lg text-sm"
@@ -32,13 +33,17 @@ const InfoBottom = () => {
   
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <div>
+    <Container>
+    <div className='container max-w[600px]'>
        <h1 className='font-sans hover:Segoe UI font-bold text-5xl text-black text-center'>
          Open Source
        </h1>
-       <p className='font-sans hover:Segoe UI text-center text-sm leading-relaxed my-2.5 sm:my-5 sm:text-lg text-gray-600 p-6'>
+       <div>
+       
+       <p className='font-sans hover:Segoe UI text-center text-sm leading-relaxed my-2.5 sm:my-5 sm:text-lg text-gray-600 p-6 '>
          The project is OpenSource, <a href="https://github.com/search?o=desc&amp;q=stars%3A%3E100000&amp;s=stars&amp;type=Repositories" className="hover:text-black font-medium text-gray-600 underline underline-offset-2" target="_blank">6th most starred project on GitHub</a> and is visited by hundreds of thousands of developers every month
       </p>     
+      </div>
      
   <div className='text-center'>
     <StyledButton
@@ -51,6 +56,7 @@ const InfoBottom = () => {
     </StyledButton>
   </div>
   </div>
+  </Container>
   );
 
 };

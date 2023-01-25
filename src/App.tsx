@@ -4,7 +4,7 @@ import Guides from "./Components/Guides";
 import InfoBottom from "./Components/InfoBottom";
 import  NavBar from "./Components/NavBar";
 import SkillBased from "./Components/SkillBased";
-import VideoExplanations from "./Components/VideoExplanations";
+import Videos from "./Components/Videos";
 import Welcome from "./Components/Welcome";
 import RoleBased from "/home/wassi/RoadMap-Clone/src/Components/RoleBased";
 import { data } from "./data";
@@ -16,8 +16,8 @@ const App =() => {
    
    <div className="bg-slate-900 relative z-0">
       <div className=' absolute w-full -z-10'><div className={` -top-30 blur-[100px] mx-auto rounded-full md:h-96 h-[320px] md:w-96 w-[320px] bg-gradient-to-b from-slate-900 to-black`}></div></div>
-      <Container>
-      <div className="p-8">
+      <div>
+      <div className="bg-gradient-to-b from-slate-900 to-black/50 relative z-0 py-8">
          <NavBar/>
          <Welcome/>
          <RoleBased/>
@@ -25,29 +25,27 @@ const App =() => {
          <SkillBased/>
          </div>
       </div>
-      </Container>
+      </div>
       <div className="grid grid-cols-1 bg-gray-50  py-7 ">
          <div className="p-8">
             <Guides/>
          </div>
          <div className="p-8">
-            <VideoExplanations />
+            <Videos />
          </div>
          <div>
             <hr />
          </div>
       </div>
       <div className="bg-white p-8">
-         <Container>
          <InfoBottom/>
-         </Container>
       </div>
+
       <Container>
-      <div className="">
+      <div>
          <BottomBar/>
       </div>
       </Container>
-            
       
    </div>
   )

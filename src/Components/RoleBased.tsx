@@ -5,19 +5,26 @@ import Container from './Container';
 
 const RoleBased: React.FC = () => {
     return (
+      <div>
+        <div className='relative grid place-items-center'>
+          <div className='w-full bg-slate-900 h-[1px] absolute'></div>
+          <h1 className="text-md text-center text-slate-400 z-10 bg-slate-900 border border-slate-900 font-regular text-md rounded-lg inline-flex top-[17px] px-3 py-1">Role Based RoadMaps </h1>
+        </div>
       <Container>
-      <><div className='items-center'>
-        <h1 className="text-md text-center text-slate-400 bg-slate-900 border border-slate-900 font-regular text-md rounded-lg left-1/2 inline-flex top-[17px] px-3 py-1">Role Based RoadMaps </h1>
-      </div><div className=' grid grid-cols-3 gap-4 btn btn-outline text-[#7295A9] mt-8'>
+      <div className='gap-2 grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 text-[#7295A9] mt-8'>
           {data.map((item, index) => {
             return (
               <Card
                 key={index}
-                title={item.title} />
+                title={item.title}
+                isNew={item.isNew}
+                isUpcoming={item.isUpcoming}
+                />
             );
           })}
-        </div></>
+        </div>
       </Container>
+      </div>
     );
   }
   

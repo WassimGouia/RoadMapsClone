@@ -1,4 +1,5 @@
 import React from 'react'
+import Container from './Container'
 
 const Welcome = () => {
   return (
@@ -15,10 +16,15 @@ const Welcome = () => {
                  text-transparent bg-clip-text text-center'>
         <h1><span>Developer Roadmaps</span> </h1>
       </div>
-      <div className='font-sans hover:Segoe UI text-inline hidden sm:block px-4 text-lg leading-relaxed my-2.5 sm:my-5 sm:text-lg'>
+      <>
+      <Container>
+      <div className='font-sans hover:Segoe UI text-inline hidden sm:block px-4 text-lg leading-relaxed my-2.5 sm:my-5 sm:text-lg w-full text-center'>
         <span className='font-semibold'>roadmap.sh</span> is a community effort to create roadmaps, guides and other educational content to help guide the developers in picking up the path and guide their learnings.
       </div>
+      </Container>
+      </>
     </div>
+    
   )
 }
 
